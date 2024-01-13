@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mutual Fund Performance Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2023-01-05', '2023-01-12', '2023-01-19', '2023-01-26', '2023-02-02', '2023-02-09'], 
+            datasets: [
+                {
+                    label: 'EDGE GF',
+                    data: [10, 9.99, 10, 10, 10.07, 10.12], 
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'IDLC GF',
+                    data: [10, 10, 10.06, 10.02, 10.04, 10.08], 
+                    borderColor: 'rgb(54, 162, 235)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
