@@ -41,13 +41,16 @@
             ]
         },
         options: {
-            responsive: true, // Makes the chart responsive
-            maintainAspectRatio: false, // Ensures the chart maintains the aspect ratio set by the chart container
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 y: {
-                    beginAtZero: false
+                    min: 7,    // Set the minimum value of the y-axis to 7
+                    max: 13,   // Set the maximum value of the y-axis to 13
                 }
             }
         }
     });
 </script>
+</body>
+</html>
